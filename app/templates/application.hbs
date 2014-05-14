@@ -1,0 +1,27 @@
+<div>
+    <nav class="navbar navbar-inverse navbar-fixed-top" role="navigation">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a class="navbar-brand" href="#">My Shopping List</a> 
+        </div>
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+        <ul class='nav navbar-nav'>
+        <li><a href='#'>Home</a></li>
+        </ul>
+        <form class="navbar-form navbar-right" role="search">
+        <div class="form-group">
+        {{input type="text" class="form-control" value=query placeholder="Search"}}
+        </div>
+        <button type="submit" class="btn btn-default" {{action "search"}}><span class="glyphicon glyphicon-search"></span></button>
+        </form>
+        </div>
+    </nav>
+    <div class="container" id="main">
+    {{outlet}}
+    </div>
+</div>

@@ -1,0 +1,15 @@
+<div class="well">
+    <strong>Items</strong> <a class='btn' {{action "add"}} ><span class='glyphicon glyphicon-plus'>Add</span></a>
+    {{outlet}}
+    <ul class="list-group">
+    {{#each item in controller}}
+        <li class="list-group-item">
+        <div>
+        {{item.Description}}
+        <a class='btn pull-right' {{action "delete" item}}><span class='glyphicon glyphicon-remove'></span></a>
+        {{#link-to 'index.edit' item class='btn pull-right'}}<span class='glyphicon glyphicon-pencil'></span>{{/link-to}}
+        </div>
+        </li>
+    {{/each}}
+ </ul>
+ </div>
